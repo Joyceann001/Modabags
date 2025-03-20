@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Premium Bags Collection</title>
+  
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    .home-section {
+      background-color: #f8f9fa;
+      padding: 50px 0;
+    }
+
+    .product-img {
+      width: 100%;
+      height: auto;
+    }
+
+    .product-card {
+      margin: 20px 0;
+    }
+
+    .product-title {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .product-price {
+      color: #28a745;
+      font-size: 20px;
+    }
+
+    .carousel-inner img {
+      width: 100%;
+      height: 100%;
+    }
+
+    footer {
+      margin-top: 50px;
+    }
+
+    section {
+      padding: 50px 0;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">ModaBags</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#shop">Shop</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Home Section -->
+  <section id="home" class="text-center">
+    <div class="container">
+      <h1>Welcome to ModaBags</h1>
+      <p>Your one-stop shop for premium leather bags!</p>
+    </div>
+  </section>
+
+  <!-- Shop Section -->
+  <section id="shop" class="bg-light">
+    <div class="container">
+      <h2 class="text-center">Shop Our Collection</h2>
+      <div class="row">
+        <!-- Product 1 -->
+        <div class="col-md-4 product-card">
+          <div class="card">
+            <img src="https://cdn.shopify.com/s/files/1/0555/7655/9925/products/product-image-1734126121_1200x.png?v=1665719035"
+              class="card-img-top" alt="Stylish Leather Handbag">
+            <div class="card-body">
+              <h5 class="card-title">Stylish Leather Handbag</h5>
+              <p class="card-text product-price">$149.99</p>
+              <a href="bag1.html" class="btn btn-primary">View Details</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="col-md-4 product-card">
+          <div class="card">
+            <img src="https://img.kwcdn.com/product/visage/image/1670045410739/4572653087571686013.png?imageView2/2/w/800/q/70/format/webp"
+              class="card-img-top" alt="Elegant Shoulder Bag">
+            <div class="card-body">
+              <h5 class="card-title">Elegant Shoulder Bag</h5>
+              <p class="card-text product-price">$129.99</p>
+              <a href="bag2.html" class="btn btn-primary">View Details</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="col-md-4 product-card">
+          <div class="card">
+            <img src="https://cdn.luxe.digital/media/2019/11/20125516/ynique-leather-tote-bag-women-business-casual-style-luxe-digital.jpg"
+              class="card-img-top" alt="Casual Tote Bag">
+            <div class="card-body">
+              <h5 class="card-title">Casual Tote Bag</h5>
+              <p class="card-text product-price">$79.99</p>
+              <a href="bag3.html" class="btn btn-primary">View Details</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="bg-light">
+    <div class="container">
+      <h2 class="text-center">Contact Us</h2>
+      <form id="contactForm" class="mx-auto" style="max-width: 500px;">
+        <div class="mb-3">
+          <label for="name" class="form-label">Name</label>
+          <input type="text" class="form-control" id="name" placeholder="Your Name">
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" class="form-control" id="email" placeholder="Your Email">
+        </div>
+        <div class="mb-3">
+          <label for="message" class="form-label">Message</label>
+          <textarea class="form-control" id="message" rows="4" placeholder="Your Message"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-light text-center py-4">
+    <p>&copy; 2025 ModaBags. All Rights Reserved.</p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" defer></script>
+
+  <!-- Custom JS -->
+  <script defer>
+    document.addEventListener("DOMContentLoaded", function () {
+      console.log("DOM fully loaded.");
+
+      document.getElementById('contactForm').addEventListener('submit', function (event) {
+        event.preventDefault();
+        let userName = document.getElementById('name').value.trim();
+        let userEmail = document.getElementById('email').value.trim();
+        let userMessage = document.getElementById('message').value.trim();
+
+        if (!userName || !userEmail || !userMessage) {
+          alert("Please fill out all fields before submitting.");
+          return;
+        }
+
+        alert(`Thank you, ${userName}, for reaching out!`);
+      });
+    });
+  </script>
+
+</body>
+
+</html>
